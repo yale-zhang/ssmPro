@@ -1,7 +1,7 @@
 package com.yale.ssm.Quartz;
 
 import com.yale.ssm.dao.UserDao;
-import com.yale.ssm.redis.RedisCache;
+import com.yale.ssm.cache.RedisCache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

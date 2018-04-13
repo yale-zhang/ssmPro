@@ -1,4 +1,4 @@
-package com.yale.ssm.redis;
+package com.yale.ssm.cache;
 
 import com.yale.ssm.util.ProtoStuffSerializerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * redis 缓存
+ * cache 缓存
  *
  */
 @Component

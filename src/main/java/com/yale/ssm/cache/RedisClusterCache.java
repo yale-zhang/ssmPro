@@ -1,7 +1,6 @@
-package com.yale.ssm.redis;
+package com.yale.ssm.cache;
 
 import com.yale.ssm.util.ProtoStuffSerializerUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
