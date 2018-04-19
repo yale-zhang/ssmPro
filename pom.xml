@@ -216,14 +216,17 @@
             <artifactId>protostuff-core</artifactId>
             <version>1.0.8</version>
         </dependency>
-
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-runtime</artifactId>
             <version>1.0.8</version>
         </dependency>
         <!--mybatis 数据访问层 end -->
-
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.7</version>
+        </dependency>
     </dependencies>
     <!-- Build Settings -->
     <!--http://maven.apache.org/pom.html#Build_Settings -->
