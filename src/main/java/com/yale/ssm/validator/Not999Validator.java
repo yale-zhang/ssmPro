@@ -1,5 +1,7 @@
 package com.yale.ssm.validator;
 
+import com.yale.ssm.validator.annotation.Not999;
+
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 

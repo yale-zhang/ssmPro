@@ -3,8 +3,9 @@ package com.yale.ssm.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.yale.ssm.validator.CustomDateSerializer;
-import com.yale.ssm.validator.Not999;
+import com.yale.ssm.validator.annotation.Not999;
 
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
 import java.util.Date;
 
@@ -14,7 +15,7 @@ public class Goods {
     private long goodsId;
 
     private String title;
-
+    @DecimalMin(value = "0.1",message = "最低单价为0.1")
     private float price;
 
     private short state;//0表示下架 1表示正常
