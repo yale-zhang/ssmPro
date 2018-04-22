@@ -1,10 +1,7 @@
 package com.yale.ssm.validator;
 
 import com.yale.ssm.entity.User;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
 
 @Service
 public class LengthValidator<T extends User> implements IValidator<T>{
