@@ -1,43 +1,29 @@
 package validator;
 
-import com.yale.ssm.web.UserController;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import com.yale.ssm.entity.User;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.ValidatorFactory;
+import javax.validation.Validator;
+import java.util.Set;
 
-@EnableWebMvc
-@WebAppConfiguration
-@ContextConfiguration(locations = {"classpath*:spring/spring-service.xml"})
-public class ValidatorTest extends AbstractTestNGSpringContextTests{
-    @Autowired
-    private WebApplicationContext webcontext;
-    @Autowired
-    private UserController userController;
+import static org.junit.Assert.assertEquals;
 
-    private MockMvc mockMvc;
+public class ValidatorTest {
+   private static Validator validator;
 
-    @BeforeMethod
-    public void prepareMockmvc(){
-        this.mockMvc = webAppContextSetup(webcontext).build();
-    }
-
-    @Test
-    public void TestUserContoller() throws Exception{
-        //Integer offset,Integer limit
-        this.mockMvc.perform(get("/user/list").param("offset","0")
-                .param("limit","50"))
-                .andDo(print())
-                .andExpect(status().isOk());
-    }
+   @BeforeClass
+    public static void setUp(){
+       ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+       validator = factory.getValidator();
+   }
+   @Test
+   public void manufacturerIsNull(){
+       User user = new User();
+       Set<ConstraintViolation<User>> validate = validator.validate(user);
+       assertEquals("userI不能为空",validate.iterator().next().getMessage());
+   }
 }

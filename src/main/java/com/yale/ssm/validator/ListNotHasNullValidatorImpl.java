@@ -17,7 +17,6 @@ public class ListNotHasNullValidatorImpl implements ConstraintValidator<ListNotH
         //传入value值，可以在校验中使用
         this.value =  listNotHasNull.value();
     }
-
     @Override
     public boolean isValid(List list, ConstraintValidatorContext constraintValidatorContext) {
         for (Object obj:list){

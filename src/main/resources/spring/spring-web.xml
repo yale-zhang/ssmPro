@@ -31,6 +31,8 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+
+
     <!--扫描web相关的controller-->
     <context:component-scan base-package="com.yale.ssm.web"/>
 
