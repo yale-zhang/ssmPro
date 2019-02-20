@@ -13,9 +13,9 @@
        - [x] Redis Sentinel主从高可用方案  
        - [x] Redis Cluster集群高可用方案    
    - [ ] Druid（数据源配置 sql防注入 sql性能监控)      
-   - [ ] 统一的异常处理      
-   - [ ] JSP JSTL JavaScript     
-   - [ ] Quartz时间调度 
+   - [ ] 统一的异常处理
+   - [ ] JSP JSTL JavaScript
+   - [ ] Quartz时间调度
    - [x] Sping Shiro权限控制(TODO)      
         
    

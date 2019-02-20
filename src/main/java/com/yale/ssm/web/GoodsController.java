@@ -1,6 +1,4 @@
 package com.yale.ssm.web;
-
-
 import com.yale.ssm.Service.IGoodsService;
 import com.yale.ssm.dto.BaseResult;
 import com.yale.ssm.entity.Goods;
