@@ -16,6 +16,8 @@
    - [ ] 统一的异常处理
    - [ ] JSP JSTL JavaScript
    - [ ] Quartz时间调度
-   - [x] Sping Shiro权限控制(TODO)      
+   - [x] Sping Shiro权限控制(TODO) 
+   
+   参考：[beauty_ssm](https://github.com/wosyingjun/beauty_ssm.git)     
         
    
